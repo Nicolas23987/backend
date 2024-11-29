@@ -6,6 +6,10 @@ import { Plataforma } from '../entity/Plataforma';
 
 const routerVideojuego = Router();
 
+
+
+
+
 // GET: Listar todos los videojuegos
 routerVideojuego.get('/', async (req, res) => {
     try {
@@ -15,6 +19,10 @@ routerVideojuego.get('/', async (req, res) => {
     } catch (error) {
         res.status(500).json({ message: 'Error al listar videojuegos', error });
     }
+});
+
+routerVideojuego.get('/prueba', async (req, res) => {
+    return res.json.status(200).json({ message: 'conectado'})
 });
 
 // GET: Obtener un videojuego por ID
